@@ -18,11 +18,7 @@
 # include "newlibft/libft.h"
 # include "move/move.h"
 
-typedef struct s_stack
-{
-	t_list	*stack_a;
-	t_list	*stack_b;
-}			t_stack;
+
 
 int		str_isdigit(const char *str);
 int		sort_ok(t_list *first, int i);
