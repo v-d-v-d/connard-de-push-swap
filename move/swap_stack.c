@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 03:01:50 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/09/04 22:31:24 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/09/18 23:24:12 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ void	sa_sb_ss(t_list *stack_a, t_list *stack_b)
 		swap_stack(stack_b);
 		write(STDOUT_FILENO, "ss", 2);
 	}
-	write(STDERR_FILENO, "\n", 1);
+	write(STDOUT_FILENO, "\n", 1);
 }

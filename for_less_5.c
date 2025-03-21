@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 03:09:44 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/09/06 01:54:00 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/09/18 23:36:35 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void	for_4(t_list *stack_a)
 		|| stack_a->next->next->next->index == 3)
 		rra_rrb_rrr(&stack_a, NULL);
 	pa_pb(&stack_a, &stack_b, 'b');
-	if (stack_b->index == 0 && !sort_ok(stack_a->next, 1))
+	if (stack_b->index == 0 && !sort_ok(stack_a, 1))
 		for_3(stack_a, 1);
-	if (stack_b->index == 3 && !sort_ok(stack_a->next, 0))
+	if (stack_b->index == 3 && !sort_ok(stack_a, 0))
 		for_3(stack_a, 0);
 	pa_pb(&stack_a, &stack_b, 'a');
 	if (stack_a->index == 3)

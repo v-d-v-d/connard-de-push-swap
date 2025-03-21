@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 05:23:45 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/09/06 01:43:46 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/09/18 23:24:04 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	rra_rrb_rrr(t_list **stack_a, t_list **stack_b)
 		reverse_rotate_stack(stack_b);
 		write(STDOUT_FILENO, "rrr", 3);
 	}
-	write(STDERR_FILENO, "\n", 1);
+	write(STDOUT_FILENO, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 00:15:04 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/09/06 01:36:25 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/09/21 06:13:06 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@
 # include "newlibft/libft.h"
 # include "move/move.h"
 
-
+typedef struct s_count
+{
+	int	i;
+	int	j;
+	int	k;
+}	t_count;
 
 int		str_isdigit(const char *str);
 int		sort_ok(t_list *first, int i);

@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 00:13:25 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/09/06 01:35:27 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/09/21 06:02:21 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,35 @@ void	add_index(t_list *first)
 	}
 }
 
-int	check_dup(t_list *first, int value)
+int	check_dup(t_list *first)
 {
-	if (first == NULL)
-		return (0);
-	if (first->value == value)
-		return (1);
-	return (check_dup(first->next, value)
-		+ check_dup(first->next, first->value));
+	int		i;
+	t_list	*temp;
+
+	while (first->next != NULL)
+	{
+		temp = first->next;
+		i = first->value;
+		while (temp != NULL)
+		{
+			if (temp->value == i)
+				return (1);
+			temp = temp->next;
+		}
+		first = first->next;
+	}
+	return (0);
 }
+
+// int	check_dup(t_list *first, int value)
+// {
+// 	if (first == NULL)
+// 		return (0);
+// 	if (first->value == value)
+// 		return (1);
+// 	return (check_dup(first->next, value)
+// 		+ check_dup(first->next, first->value));
+// }
 
 int	main(int argc, char const **argv)
 {
@@ -73,7 +93,7 @@ int	main(int argc, char const **argv)
 	if (argc == 1)
 	{
 		add_index(first);
-		if (first == NULL || check_dup(first->next, first->value))
+		if (first == NULL || check_dup(first))
 			return (ft_error("Error\n"));
 		sort(first);
 		return (0);

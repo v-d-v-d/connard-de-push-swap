@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 05:00:54 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/09/05 01:47:44 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/09/18 23:23:57 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	pa_pb(t_list **stack_a, t_list **stack_b, char c)
 		push_stack(stack_a, stack_b);
 		write(STDOUT_FILENO, "pb", 2);
 	}
-	write(STDERR_FILENO, "\n", 1);
+	write(STDOUT_FILENO, "\n", 1);
 }
